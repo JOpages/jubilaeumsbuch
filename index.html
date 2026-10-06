@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Das JUHbiläumsbuch: 75 Jahre Johanniter, erzählt von euch</title>
+<title>75 Jahre Ehrenamt: erzählt von euch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
@@ -62,6 +62,17 @@ p{margin:0 0 .9em}
 .caret{display:inline-block;width:.07em;height:.9em;background:currentColor;margin-left:.04em;vertical-align:-.08em;animation:blink 1s steps(1,end) infinite}
 @keyframes blink{50%{opacity:0}}
 .hero .lead{font-size:clamp(16px,2vw,19px);margin:18px 0 22px;max-width:36em;color:#2a1d10}
+.promise-mini{font-family:var(--hand);font-size:clamp(19px,2.4vw,23px);line-height:1.3;color:var(--blau);margin:-6px 0 20px;max-width:32em}
+.promise-mini span{background:linear-gradient(transparent 55%,rgba(222,255,0,.75) 55%,rgba(222,255,0,.75) 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.promise{text-align:center;padding:clamp(30px,6vw,70px) 0 clamp(10px,3vw,30px)}
+.promise .big{font-family:var(--hand);font-size:clamp(30px,5vw,54px);line-height:1.2;color:#fff;max-width:900px;margin:0 auto clamp(30px,5vw,50px);transform:rotate(-1.5deg)}
+.promise .big em{font-style:normal;color:var(--blau);background:var(--gelb);padding:0 .2em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.steps{list-style:none;margin:0 auto;padding:0;max-width:900px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+.steps::before{content:"";position:absolute;left:16%;right:16%;top:28px;border-top:3px dashed rgba(255,255,255,.35)}
+.steps li{position:relative;color:#fff;font-size:17px;font-weight:500}
+.steps .n{display:flex;align-items:center;justify-content:center;width:56px;height:56px;margin:0 auto 12px;border-radius:50%;background:var(--rot);font:900 24px/1 var(--sans);color:#fff;box-shadow:0 0 0 6px var(--blau)}
+.steps li:last-child .n{background:var(--gelb);color:var(--blau)}
+.cta-promise{display:block;font-family:var(--hand);font-size:20px;line-height:1.3;margin-top:16px;max-width:26em}
 .countdown{display:block;margin-top:12px;font-family:var(--hand);font-size:clamp(19px,2.4vw,23px);color:var(--rot);transform:rotate(-1.5deg)}
 .countdown b{font-family:var(--sans);font-weight:900;font-size:1.25em}
 .seal{position:absolute;z-index:3;right:-18px;top:-30px;width:clamp(84px,14vw,120px);transform:rotate(12deg);filter:drop-shadow(0 4px 6px rgba(0,0,0,.35))}
@@ -208,7 +219,7 @@ section{position:relative;padding:clamp(56px,9vw,110px) 0}
 .starter .lbl{display:block;font-size:14px;font-weight:500;color:var(--rot);margin-bottom:4px}
 .starter .line{display:block;font-family:var(--hand);font-size:clamp(21px,2.4vw,25px);line-height:1.25;min-height:2.5em}
 .slant-red .tag{font-family:var(--hand);font-size:26px;display:block;margin-bottom:6px}
-.slant-cross{position:absolute;z-index:2;width:96px;height:96px;left:var(--cx,50%);top:50%;transform:translate(-50%,-50%)}
+.slant-cross{position:absolute;z-index:2;width:96px;height:96px;left:var(--cx,50%);top:var(--cy,50%);transform:translate(-50%,-50%)}
 .slant-kids{display:flex;align-items:flex-end;justify-content:center;padding:30px 20px 0}
 .slant-kids>span{display:block;width:100%;max-width:460px}
 .slant-kids svg{width:100%;height:auto;display:block}
@@ -218,12 +229,12 @@ section{position:relative;padding:clamp(56px,9vw,110px) 0}
 
 /* Team */
 .team{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,32px)}
-.member{background:#fbf8f0;padding:12px 12px 18px;box-shadow:0 14px 26px rgba(0,0,0,.45);transform:rotate(var(--r,0deg));color:var(--blau)}
-.member .pic{aspect-ratio:1/1;background:var(--blau3);overflow:hidden}
+.member{text-align:center;color:#fff}
+.member .pic{aspect-ratio:1/1;width:100%;max-width:200px;margin:0 auto;border-radius:50%;background:var(--blau3);overflow:hidden;border:5px solid #fff;box-shadow:0 12px 26px rgba(0,0,0,.45)}
 .member .pic img,.member .pic svg{width:100%;height:100%;object-fit:cover;display:block}
-.member h3{font-size:20px;margin:14px 0 2px}
-.member .role{font-size:15px;font-weight:500;color:var(--rot);margin:0 0 8px}
-.member .ask{font-family:var(--hand);font-size:18px;line-height:1.25;margin:0}
+.member h3{font-size:20px;margin:16px 0 4px}
+.member .role{font-size:15px;font-weight:500;color:var(--gelb);margin:0 0 8px}
+.member .ask{font-family:var(--hand);font-size:18px;line-height:1.25;margin:0;opacity:.85}
 footer{color:#fff;padding:50px 0 calc(40px + env(safe-area-inset-bottom,0px))}
 footer .row{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.25);padding-top:26px}
 footer .claim{font-weight:500;font-size:20px}
@@ -239,9 +250,18 @@ footer small{opacity:.7;font-size:13px}
   .card:nth-child(2){transform:rotate(.8deg)}
   .album{grid-template-columns:repeat(2,1fr)}
   .team{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
   .slant-inner{grid-template-columns:1fr}
-  .slant-red{clip-path:polygon(0 0,100% 0,100% calc(100% - 60px),0 100%);padding:48px 20px 90px}
-  .slant-cross{left:auto;right:24px;top:auto;bottom:calc(var(--kh,260px) + 6px);transform:none;width:76px;height:76px}
+  /* flache Schräge: 21,26° zur Waagerechten */
+  .slant-red{clip-path:polygon(0 0,100% 0,100% calc(100% - var(--w,390px) * var(--slant)),0 100%);padding:48px 20px calc(var(--w,390px) * var(--slant) + 16px)}
+  .slant-cross{width:76px;height:76px}
+}
+@media (max-width:640px){
+  .steps{grid-template-columns:1fr;gap:22px;max-width:320px}
+  .steps::before{left:28px;right:auto;top:28px;bottom:28px;border-top:0;border-left:3px dashed rgba(255,255,255,.35)}
+  .steps li{display:flex;align-items:center;gap:16px;text-align:left}
+  .steps .n{margin:0;flex:none}
 }
 @media (max-width:760px){
   .tl-line,.tl-fill{left:17px}
@@ -264,7 +284,8 @@ footer small{opacity:.7;font-size:13px}
 @media (max-height:780px){
   .hero-main{padding-top:34px;padding-bottom:12px}
   .kicker{font-size:19px;margin-bottom:2px}
-  .hero .lead{font-size:16px;line-height:1.4;margin:12px 0 16px}
+  .hero .lead{font-size:16px;line-height:1.4;margin:12px 0 12px}
+  .promise-mini{font-size:18px;margin:-2px 0 14px}
   .hero-sheet{padding-top:24px;padding-bottom:26px}
   .countdown{font-size:18px;margin-top:8px}
   .scene{height:136px}
@@ -289,13 +310,14 @@ footer small{opacity:.7;font-size:13px}
       <div class="hero-card">
         <span class="seal" data-svg="seal"></span>
         <div class="sheet hero-sheet" data-torn>
-          <span class="kicker">Das muss in unser JUHbiläumsbuch!</span>
-          <h1 aria-label="75 Jahre Geschichten, erzählt von euch">
+          <span class="kicker">Das muss ins Buch!</span>
+          <h1 aria-label="75 Jahre Ehrenamt, erzählt von euch">
             <span class="row" aria-hidden="true">75 Jahre</span>
             <span class="row" aria-hidden="true"><span class="w1" id="w1"></span><span class="caret" id="c1" style="color:var(--rot)"></span></span>
             <span class="row small" aria-hidden="true">erzählt von <span class="w2" id="w2"></span><span class="caret" id="c2"></span></span>
           </h1>
-          <p class="lead">Zum Tag der Johanniter am 12. Juni 2027 erscheint unser JUHbiläumsbuch. Voller Geschichten aus dem Ehrenamt: über Menschen, die uns geprägt haben, über Momente, die gut ausgegangen sind, und über die Anekdoten, die sonst nur nach Dienstschluss erzählt werden.</p>
+          <p class="lead">Zum Tag der Johanniter am 12. Juni 2027 erscheint unser Buch „75 Jahre Ehrenamt“. Es zeigt nicht alles aus 75 Jahren, sondern das Wichtigste: unser Fundament. Die Menschen, die Momente und die Anekdoten aus dem Ehrenamt.</p>
+          <p class="promise-mini"><span>Wir wählen aus, melden uns bei euch und dann wollen wir alles hören.</span></p>
           <a class="btn" data-cta href="#">Geschichte einreichen</a>
           <span class="countdown" id="cd"></span>
         </div>
@@ -316,14 +338,15 @@ footer small{opacity:.7;font-size:13px}
     <div class="sheet intro-sheet" data-torn>
       <div class="intro-grid">
         <div>
-          <h2 class="sec-title">Seit 1952 schreiben wir Geschichte. Jetzt schreiben wir sie auf.</h2>
+          <h2 class="sec-title">Seit 1952 tragen uns Ehrenamtliche. Jetzt erzählen wir ihre Geschichten.</h2>
           <p>75 Jahre Johanniter-Unfall-Hilfe, das sind unzählige Dienste, Nachtschichten, Zeltlager, Übungen und Momente, in denen jemand genau zur richtigen Zeit da war. Vieles davon steht in keiner Chronik.</p>
+          <p>Unser Buch will nicht alles davon zeigen. Es erzählt vom Wichtigsten, dem Fundament von allem: unserem Ehrenamt.</p>
           <p>Genau diese Geschichten suchen wir. Von euch selbst oder von anderen, die ihr bewundert. Denn auch hier gilt: <b>#keinwirohneeuch</b>.</p>
         </div>
         <div class="notes">
           <div class="note"><span class="mk">✗</span> Die Story muss nicht fertig sein.</div>
           <div class="note"><span class="mk">✓</span> Ein paar Sätze als erster Eindruck reichen.</div>
-          <div class="note">Wir wählen aus, melden uns bei euch und dann wollen wir alles hören.</div>
+          <div class="note">Mehrere Geschichten? Sehr gerne!</div>
         </div>
       </div>
       <div class="cards">
@@ -332,6 +355,17 @@ footer small{opacity:.7;font-size:13px}
         <div class="card"><h3>Echte Insider</h3><p>Die Legende vom verschwundenen Einsatzwagen. Das Lagerfeuerlied, das jeder kennt. Genau das, was man nur versteht, wenn man dabei war.</p></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="promise on-dark" id="versprechen">
+  <div class="wrap">
+    <p class="big">Wir wählen aus, melden uns bei euch und dann wollen wir <em>alles hören.</em></p>
+    <ol class="steps">
+      <li><span class="n">1</span>Ihr erzählt uns kurz eure Geschichte.</li>
+      <li><span class="n">2</span>Wir wählen aus und melden uns bei euch.</li>
+      <li><span class="n">3</span>Dann wollen wir alles hören.</li>
+    </ol>
   </div>
 </section>
 
@@ -377,7 +411,7 @@ footer small{opacity:.7;font-size:13px}
     <div class="sheet tl-sheet" data-torn>
       <div class="head">
         <h2 class="sec-title">Vom Aufruf bis zum fertigen Buch</h2>
-        <p style="opacity:1">So entsteht das JUHbiläumsbuch. Ihr seid gleich am Anfang gefragt.</p>
+        <p style="opacity:1">So entsteht „75 Jahre Ehrenamt“. Ihr seid gleich am Anfang gefragt.</p>
       </div>
       <ol class="tl" id="timeline"><div class="tl-line"></div><div class="tl-fill" id="tlFill"></div></ol>
     </div>
@@ -389,9 +423,10 @@ footer small{opacity:.7;font-size:13px}
     <div class="slant-red">
       <span class="tag">#keinwirohneeuch</span>
       <h2>Eure Geschichte fehlt noch.</h2>
-      <p>Egal ob Rettungsdienst, Bevölkerungsschutz, Johanniter-Jugend, Sanitätsdienst oder etwas ganz anderes: Erzählt uns kurz, wer oder was in dieses Buch gehört.</p>
+      <p>Egal ob Rettungsdienst, Bevölkerungsschutz, Johanniter-Jugend, Sanitätsdienst, Besuchsdienst, Lacrima oder etwas ganz anderes: Erzählt uns kurz, wer oder was in dieses Buch gehört.</p>
       <div class="starter"><span class="lbl">Kein Anfang in Sicht? Wie wäre es mit:</span><span class="line">„<span id="st"></span><span class="caret"></span>“</span></div>
       <a class="btn white" data-cta href="#">Geschichte einreichen</a>
+      <span class="cta-promise">Wir wählen aus, melden uns bei euch und dann wollen wir alles hören.</span>
     </div>
     <div class="slant-kids" id="kids"><span data-svg="kids" data-anim="1"></span></div>
     <span class="slant-cross" data-svg="seal"></span>
@@ -429,7 +464,7 @@ const CONFIG = {
   formUrl: "https://4juh.de/pages/ehrenamt/apps/form/einreichung-75-jahre",
 
   // Wechselnde Wörter in der Überschrift
-  words1: ["Geschichten", "Einsätze", "Nachtschichten", "Zeltlager", "Freundschaften", "Legenden", "Herzblut"],
+  words1: ["Ehrenamt", "Geschichten", "Einsätze", "Nachtschichten", "Zeltlager", "Freundschaften", "Legenden", "Herzblut"],
   words2: ["euch", "der Jugend", "Weggefährten", "Ehrenamtlichen", "euch allen"],
 
   // Satzanfänge als Schreibhilfe
@@ -471,8 +506,8 @@ const CONFIG = {
     { date:"1952", title:"Alles beginnt", text:"Die Johanniter-Unfall-Hilfe wird gegründet. Seitdem sind Generationen von Ehrenamtlichen dazugekommen und jede hat eigene Geschichten mitgebracht.", type:"history" },
     { date:"Oktober 2026", title:"Der Aufruf", text:"Ab jetzt sammeln wir eure Geschichten. Kurz, ungeschliffen und gerne mit einem Augenzwinkern." },
     { date:"bis 30. November 2026", title:"Einreichen", text:"Ein paar Sätze im Formular reichen völlig. Ihr könnt auch mehrere Geschichten einreichen." },
-    { date:"Dezember 2026", title:"Auswahl", text:"Das Redaktionsteam liest alles und meldet sich bei euch. Jede Einsendung hilft uns, auch wenn nicht jede ein eigenes Kapitel wird." },
-    { date:"Januar und Februar 2027", title:"Zuhören", text:"Wir treffen uns, telefonieren und stöbern gemeinsam in alten Fotokisten. Jetzt wollen wir wirklich alles hören." },
+    { date:"Dezember 2026", title:"Auswahl", text:"Wir lesen alles, wählen aus und melden uns bei euch. Jede Einsendung hilft uns, auch wenn nicht jede ein eigenes Kapitel wird." },
+    { date:"Januar und Februar 2027", title:"Zuhören", text:"Dann wollen wir alles hören: Wir treffen uns, telefonieren und stöbern gemeinsam in alten Fotokisten." },
     { date:"März bis Mai 2027", title:"Schreiben, Gestalten, Drucken", text:"Aus euren Erzählungen werden Kapitel, aus alten Fotos werden Seiten." },
     { date:"12. Juni 2027", title:"Tag der Johanniter: Das Buch erscheint", text:"75 Jahre zum Durchblättern, Verschenken und Weitererzählen.", type:"finale" }
   ],
@@ -798,7 +833,7 @@ if (reduced){ document.querySelectorAll(".caret").forEach(c => c.style.display =
 (() => {
   const t = new Date(CONFIG.release + "T00:00:00"), now = new Date(); now.setHours(0,0,0,0);
   const d = Math.round((t - now) / 864e5), el = $("#cd");
-  el.innerHTML = d > 1 ? `Noch <b>${d}</b> Tage bis zum Tag der Johanniter` : d === 1 ? "Morgen ist es so weit!" : d === 0 ? "Heute erscheint das Buch!" : "Das JUHbiläumsbuch ist da!";
+  el.innerHTML = d > 1 ? `Noch <b>${d}</b> Tage bis zum Tag der Johanniter` : d === 1 ? "Morgen ist es so weit!" : d === 0 ? "Heute erscheint das Buch!" : "„75 Jahre Ehrenamt“ ist da!";
 })();
 
 // Scroll-Hinweis ausblenden, sobald gescrollt wird
@@ -899,8 +934,17 @@ CONFIG.team.forEach(m => {
 // Schräge an echte Höhe anpassen
 function layout(){
   document.documentElement.style.setProperty("--kh", $("#kids").offsetHeight + "px");
-  const si = $(".slant-inner"), h = si.offsetHeight; si.style.setProperty("--h", h + "px");
-  si.style.setProperty("--cx", ($(".slant-red").offsetWidth - h * 0.389 / 2) + "px");
+  const si = $(".slant-inner"), red = $(".slant-red"), S = 0.389; // tan(21,26°)
+  const W = red.offsetWidth; si.style.setProperty("--w", W + "px");
+  if (matchMedia("(max-width:900px)").matches){
+    // flache Schräge: Achtspitz mittig auf der Kante
+    const H = red.offsetHeight, x = W * .78;
+    si.style.setProperty("--cx", x + "px"); si.style.setProperty("--cy", (H - x * S) + "px");
+  } else {
+    // steile Schräge: Achtspitz auf halber Höhe mittig auf der Kante
+    const h = si.offsetHeight; si.style.setProperty("--h", h + "px");
+    si.style.setProperty("--cx", (W - h * S / 2) + "px"); si.style.setProperty("--cy", (h / 2) + "px");
+  }
 }
 addEventListener("resize", layout); addEventListener("load", layout); layout();
 </script>
